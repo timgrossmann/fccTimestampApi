@@ -41,4 +41,4 @@ app.get('/:time', (req, res) => {
     res.end();
 });
 
-app.listen(process.env.PORT);
+app.listen(3000);
