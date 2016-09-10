@@ -22,15 +22,14 @@ app.get('/', (req, res) => {
 app.get('/:time', (req, res) => {
     const input = req.params.time;
     const output = {};
-    var time;
     
     if (/^\d+$/.test(input)) {
-        time = new Date(input * 1000);
+        const time = new Date(input * 1000);
         
         output.unix = input;
         output.natural = `${monthNames[time.getMonth()]}-${time.getFullYear()}-${time.getDate()}`;
     } else {
-        time = new Date(input);
+        const time = new Date(input);
         const parts = input.split('-')
         
         output.unix = time.getTime() / 1000;
@@ -41,4 +40,4 @@ app.get('/:time', (req, res) => {
     res.end();
 });
 
-app.listen(3000);
+app.listen(process.env.PORT);
