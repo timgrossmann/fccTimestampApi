@@ -6,6 +6,8 @@ const monthNames = ["January", "February", "March", "April", "May", "June",
   "July", "August", "September", "October", "November", "December"
 ];
 
+app.set('port', (process.env.PORT || 3000));
+
 app.get('/', (req, res) => {
     res.send(`
     <h1>FCC-Timestamp-API</h1>
@@ -40,4 +42,5 @@ app.get('/:time', (req, res) => {
     res.end();
 });
 
-app.listen(process.env.PORT);
+
+app.listen(app.get('port'));
