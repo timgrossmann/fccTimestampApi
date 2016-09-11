@@ -12,8 +12,8 @@ app.get('/', (req, res) => {
     res.send(`
     <h1>FCC-Timestamp-API</h1>
     <h4>Example usage:</h4>
-    <p>http:foo.com/December-2015-15</p>
-    <p>http:foo.com/1450137600</p>
+    <p>https://fcc-time-api.herokuapp.comDecember-2015-15</p>
+    <p>https://fcc-time-api.herokuapp.com/1450137600</p>
     <br />
     <h4>Result:</h4>
     <p>{ "unix": 1450137600, "natural": "December 15, 2015" }</p>
