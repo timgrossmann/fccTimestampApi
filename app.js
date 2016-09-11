@@ -43,6 +43,4 @@ app.get('/:time', (req, res) => {
 });
 
 
-app.listen(app.get('port'), () => {
-    console.log('Listening to port ' + app.get('port'));
-});
+app.listen(app.get('port'));
