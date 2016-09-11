@@ -11,6 +11,9 @@
     "type": "git",
     "url": "git+https://github.com/timgrossmann/fccTimestampApi.git"
   },
+  "engines": {
+    "node": "4.5.0"
+  },
   "author": "",
   "license": "ISC",
   "bugs": {
