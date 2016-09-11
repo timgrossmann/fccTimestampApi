@@ -26,15 +26,15 @@ app.get('/:time', (req, res) => {
     const output = {};
     
     if (/^\d+$/.test(input)) {
-        const time = new Date(input * 1000);
+        const unixDate = new Date(input * 1000);
         
         output.unix = input;
-        output.natural = `${monthNames[time.getMonth()]}-${time.getFullYear()}-${time.getDate()}`;
+        output.natural = `${monthNames[unixDate.getMonth()]}-${unixDate.getFullYear()}-${unixDate.getDate()}`;
     } else {
-        const time = new Date(input);
+        const naturalDate = new Date(input);
         const parts = input.split('-')
         
-        output.unix = time.getTime() / 1000;
+        output.unix = naturalDate.getTime() / 1000;
         output.natural = parts.length === 3 ? `${parts[0]}-${parts[1]}-${parts[2]}` : NaN;
     }
     
